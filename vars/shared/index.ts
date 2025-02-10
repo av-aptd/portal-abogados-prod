@@ -460,6 +460,10 @@ export const especialUsers = [
     id: 77,
     email: "paulara273@gmail.com",
   },
+  {
+    id: 78,
+    email: "ausibiobarrerogomez@gmail.com",
+  },
 ];
 
 export const bankFlipUsers = [
