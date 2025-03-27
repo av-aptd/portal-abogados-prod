@@ -19,6 +19,8 @@ const ListPlans = ({
 }: any) => {
   const profile = usePortalStore((state: any) => state.profile);
 
+  console.log("plans", plans.length);
+
   return (
     <>
       <div className="border-b py-4 px-8">
@@ -38,7 +40,7 @@ const ListPlans = ({
         <div>
           <div className="border-t h-[400px] overflow-y-scroll pt-4">
             {plans
-              ?.filter((plan: any) => plan.tenantid == 1)
+              // ?.filter((plan: any) => plan.tenantid == 1)
               .map((plan: any) => (
                 <div
                   key={plan.id}

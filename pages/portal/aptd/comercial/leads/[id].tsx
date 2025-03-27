@@ -105,6 +105,8 @@ const LeadDetail: NextPageWithLayout = () => {
     getPlans(profile.token, queryParams)
   );
 
+  console.log("pricingsQuery", pricingsQuery.data);
+
   const sendLinkToClient = async () => {
     mutation.mutate(body);
   };

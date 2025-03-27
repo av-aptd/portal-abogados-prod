@@ -77,12 +77,14 @@ const Pagos: NextPageWithLayout = () => {
                   <div className="border p-4 rounded-lg bg-gray-50 text-center">
                     <p className="text-gray-500 text-sm">Importe pendiente</p>
                     <p className="font-bold text-2xl text-gray-700 pt-2">
-                      {PaymentQuery.data.total_pending > 0
-                        ? PaymentQuery.data.total_pending.toLocaleString(
-                            "es-AR"
-                          )
-                        : 0}
-                      €
+                      {Number(PaymentQuery.data.total_pending) > 0
+                        ? `${Number(
+                            PaymentQuery.data.total_pending
+                          ).toLocaleString("es-AR")}€`
+                        : `${Number(
+                            PaymentQuery.data.contract_price -
+                              PaymentQuery.data.total_paid
+                          ).toLocaleString("es-AR")}€`}
                     </p>
                   </div>
                   <div className="border p-4 rounded-lg bg-gray-50 text-center">

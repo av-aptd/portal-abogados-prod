@@ -54,9 +54,13 @@ const InformationProcess: NextPageWithLayout = () => {
     () => getProcessInfo(profile.token, router.query.proccessId)
   );
 
+  console.log("ContractQuery", ContractQuery.data);
+
   const paymentsQuery = useQuery(["paymentsUser", router.query.id], () =>
     getUserPayments(profile.token, router.query.id)
   );
+
+  console.log("paymentsQuery", paymentsQuery.data);
 
   var queryParams = `searchBy=${""}&searchValue=${""}&limit=1000&page=1`;
 
@@ -252,11 +256,14 @@ const InformationProcess: NextPageWithLayout = () => {
                             <LineItem
                               label="Total pendiente"
                               value={
-                                Number(ContractQuery.data.total_pending) >= 0
+                                Number(ContractQuery.data.total_pending) > 0
                                   ? `${Number(
                                       ContractQuery.data.total_pending
                                     ).toLocaleString("es-AR")}€`
-                                  : 0
+                                  : `${Number(
+                                      ContractQuery.data.contract_price -
+                                        ContractQuery.data.total_paid
+                                    ).toLocaleString("es-AR")}€`
                               }
                             />
 
