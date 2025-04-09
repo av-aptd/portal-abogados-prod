@@ -258,7 +258,8 @@ const InformationProcess: NextPageWithLayout = () => {
                               value={
                                 Number(ContractQuery.data.total_pending) > 0
                                   ? `${Number(
-                                      ContractQuery.data.total_pending
+                                      ContractQuery.data.contract_price -
+                                        ContractQuery.data.total_paid
                                     ).toLocaleString("es-AR")}€`
                                   : `${Number(
                                       ContractQuery.data.contract_price -
