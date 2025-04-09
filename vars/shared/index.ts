@@ -61,26 +61,8 @@ export const years = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
 export const bankAccouts = [
   {
     id: 1,
-    name: "Banco Sabadell",
-    iban: "ES60 0081 0200 2000 0333 9139",
-    concept: "Nombre cliente y LSO",
-  },
-  {
-    id: 2,
     name: "Banco Santander",
     iban: "ES83 0049 4704 1120 1613 4058",
-    concept: "Nombre cliente y LSO",
-  },
-  {
-    id: 3,
-    name: "Caixabank",
-    iban: "ES82 2100 3678 0822 0009 3454",
-    concept: "Nombre cliente y LSO",
-  },
-  {
-    id: 4,
-    name: "BBVA",
-    iban: "ES03 0182 0262 9102 0245 6296",
     concept: "Nombre cliente y LSO",
   },
 ];

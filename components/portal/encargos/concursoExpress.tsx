@@ -609,19 +609,22 @@ const EncargoConcursoExpress = ({ onSubmit }: any) => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
-                  {bankAccouts.map((bank) => (
-                    <tr className="divide-x divide-gray-200" key={bank.id}>
-                      <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">
-                        {bank.name}
-                      </td>
-                      <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                        {bank.iban}
-                      </td>
-                      <td className="whitespace-nowrap p-4 text-sm text-gray-500">
-                        {bank.concept}
-                      </td>
-                    </tr>
-                  ))}
+                  {/* {bankAccouts.map((bank) => ( */}
+                  <tr
+                    className="divide-x divide-gray-200"
+                    key={bankAccouts[0].id}
+                  >
+                    <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">
+                      {bankAccouts[0].name}
+                    </td>
+                    <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                      {bankAccouts[0].iban}
+                    </td>
+                    <td className="whitespace-nowrap p-4 text-sm text-gray-500">
+                      {bankAccouts[0].concept}
+                    </td>
+                  </tr>
+                  {/* ))} */}
                 </tbody>
               </table>
             </div>
