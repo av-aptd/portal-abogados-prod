@@ -46,11 +46,12 @@ const UserDocs: NextPageWithLayout = () => {
   }, []);
 
   const isQuestionsAnswered = () => {
-    if (clientInfo?.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
+    // if (clientInfo?.length > 0) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    return true;
   };
 
   const getUserInfo = async () => {

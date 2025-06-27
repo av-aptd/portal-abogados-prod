@@ -113,6 +113,10 @@ const PlantillaPredefinida = () => {
       name: "Navidad 2024",
       value: "navidad-2024",
     },
+    {
+      name: "Renta 2024",
+      value: "renta-2024",
+    },
   ];
 
   const {

@@ -85,7 +85,12 @@ const Portal: NextPageWithLayout = () => {
             }
           }
         } else {
-          if (status.installments_paid > 0) {
+          console.log("status:", status);
+
+          if (
+            status.installments_paid > 0 ||
+            status.installments_pending == 0
+          ) {
             const userProperties = await getUserInitialQuestions(
               profile.token,
               profile.id
